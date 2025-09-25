@@ -4,7 +4,7 @@ def ludec_pivot(A_in):
     n = A.shape[0]
     L = np.identity(n)
     U = np.copy(A)
-    P = np.identity(n)
+    P = np.arange(n)
 
     for j in range(n-1):
         pivot_row = j + np.argmax(np.abs(U[j:, j]))
